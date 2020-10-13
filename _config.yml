@@ -1,27 +1,66 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+#
+# Blog Settings
+#
+author: Akhilesh Pratap
+description: My Digital Mind.
+url: https://www.akpratap.com
+title: Akhilesh Pratap
+subtitle: My Digital Mind
+lang: en
+timezone: Pacific/Auckland
 
-# Permalinks
-permalink:        pretty
-
-# Setup
-title:            Akhilesh Pratap
-tagline:          'My digital mind'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
 gravatar_url: https://gravatar.com/avatar/ae729a4f0a564eb4ad00c7894e83fd38
+linkedin_url: https://linkedin.com/in/akpratap
+github_url: https://github.com/akpratap
+github_repo_url: https://github.com/akpratap/akpratap.com
 
+# Disqus Comments
+disqus_short_name: akpratap
+disqus_show_comment_count: true
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+# Jekyll Settings
+permalink: /:title/
+paginate: 10
+paginate_path: "page/:num"
+future: false
 
-paginate:         5
+plugins:
+  - jekyll-paginate
+  
+sass:
+  sass_dir:          _scss
+  style:            :compressed
 
-# Custom vars
-version:          1.0.0
+exclude: ["README.md", "Gemfile", "Gemfile.lock", ".editorconfig", "rakefile.rb"]
 
-github:
-  repo:           https://github.com/poole/hyde
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: null 
+      sitemap: false
+      comments: false
+      sharing: false
+      image: null  
+      image_alt: null  
+  -
+    scope:
+      path: "page"
+      type: "pages"
+    values:
+      layout: page 
+      sitemap: true      
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      sitemap: true
+      comments: true
+      sharing: true
+      image: "cover.png"
+      image_alt: "cover.jpg"
+      excerpt_separator: "<!--more-->"
+      youtube: null

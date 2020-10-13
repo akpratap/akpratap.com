@@ -1,0 +1,309 @@
+ <!DOCTYPE HTML>
+
+	<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="" rel="alternate" title="Akhilesh Pratap" type="application/atom+xml">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700,800' rel='stylesheet' type='text/css'>
+	<link href="/css/site.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/js/slash.js" async></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=WGL8Y3xokm">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=WGL8Y3xokm">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=WGL8Y3xokm">
+	<link rel="manifest" href="/images/icons/site.webmanifest?v=WGL8Y3xokm">
+	<link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=WGL8Y3xokm" color="#5bbad5">
+	<link rel="shortcut icon" href="/images/icons/favicon.ico?v=WGL8Y3xokm">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=WGL8Y3xokm">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="canonical" href="http://localhost:4000/c-8-switch-expressions/">
+	
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="http://localhost:4000/c-8-switch-expressions/" />
+	<meta property="og:site_name" content="Calvin A. Allen" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@_CalvinAllen" />
+	<meta name="twitter:creator" content="@_CalvinAllen" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="628" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="fb:app_id" content="2137237369891084" />
+
+	
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="C# 8.0 - Switch Expressions" />
+  	
+
+  	
+  	
+  	
+
+	
+		<meta property="og:image" content="http://localhost:4000/images/social/headshot-cover.png" />
+	
+
+	
+		<meta property="og:description" content="Switch 'expressions' are a more concise version of a switch 'statement' that was released in C# 8.0.  Let's take a look!" />
+	
+
+	
+		<meta property="article:published_time" content="2020-02-01T00:00:00+13:00" />
+		<meta property="article:author" content="http://localhost:4000/about/" />
+	
+
+	
+  		
+  			<meta content="csharp" property="article:tag">
+  		
+  			<meta content="dotnet" property="article:tag">
+  		
+	
+
+	
+		<title>C# 8.0 - Switch Expressions - Akhilesh Pratap</title>
+	
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner"><div class="profilepic">
+	
+	  <img src="https://gravatar.com/avatar/ae729a4f0a564eb4ad00c7894e83fd38?s=160" alt="Profile Picture" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Akhilesh Pratap</a></h1>
+  
+    <h2>My Digital Mind</h2>
+  
+</hgroup>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">home</a></li>
+  <li><a href="/about/">about</a></li>
+  <li><a href="/archive">archives</a></li>
+  <li><a href="/contact">contact</a></li>
+  <li><a href="/tags">tags</a></li>
+</ul>
+</nav>
+<br />
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+			<a class="linkedin" href="https://linkedin.com/in/akpratap" title="LinkedIn">LinkedIn</a>
+				
+		
+			<a class="github" href="https://github.com/akpratap" title="GitHub">GitHub</a>
+		
+		
+		
+	</div>
+</nav>
+
+<a href="https://akpratap.com">
+  <img src="/images/social/MVP_Logo_Preferred_Cyan300_RGB_300ppi.png" width="72px" style="padding-top: 36px;" />
+</a>
+</header>				
+			</div>
+		</div>
+		<div class="mid-col">
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">C# 8.0 - Switch Expressions</h1>
+	<div class="meta">
+  <span class="date-large">
+
+
+
+
+<time datetime="2020-02-01T00:00:00+13:00"  itemprop="datePublished">February  1, 2020</time></span>
+  <br />
+	
+		
+
+<span class="comments"><a href="#disqus_thread">comments</a></span>
+  
+	<span class="tags">
+		csharp, dotnet
+  </span>
+  <span class="edit">
+
+<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-02-01-c-8-switch-expressions/2020-02-01-c-8-switch-expressions.md">edit</a>
+</span>
+</div>
+
+
+	
+	
+		<div class="share">
+	<div class="addthis_inline_share_toolbox"></div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a4c04d0ba6c1136"></script>
+</div>
+
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+
+		
+		<iframe
+			width="710"
+			height="399"
+			src="https://www.youtube.com/embed/yLJl4bJtoMQ"
+			frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen 
+			loading="lazy"></iframe>
+		
+
+		<p>In C# 8.0, a new form of “switch” was introduced.  While similar, you’ll find that this new “switch expression” is more concise than it’s “switch statement” counterpart as it does not require all the various keywords (<code class="language-plaintext highlighter-rouge">case</code>, <code class="language-plaintext highlighter-rouge">break</code>, <code class="language-plaintext highlighter-rouge">default</code>, etc.).</p>
+
+<p>Take this, albeit a contrived, example, starting with this enum of car makes in our pretend application:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">enum</span> <span class="n">CarMake</span>
+<span class="p">{</span>
+    <span class="n">Chevrolet</span><span class="p">,</span>
+    <span class="n">Ford</span><span class="p">,</span>
+    <span class="n">Dodge</span><span class="p">,</span>
+    <span class="n">Tesla</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>With that enum, we can create a specific “car manufacturing service”.  Before C# 8.0, that would have looked something like this:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="n">ICarService</span> <span class="nf">CarMakeFactory</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">make</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">make</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Chevrolet</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">ChevroletService</span><span class="p">();</span>
+        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Ford</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">FordService</span><span class="p">();</span>
+        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Dodge</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">DodgeService</span><span class="p">();</span>
+        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Tesla</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">TeslaService</span><span class="p">();</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">"Invalid value for CarMake"</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="k">nameof</span><span class="p">(</span><span class="n">make</span><span class="p">));</span>    
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In C# 8.0, we can make this a little more concise, and, in my opinion, easier to read:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="n">ICarService</span> <span class="nf">CarMakeFactory</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">make</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">make</span> <span class="k">switch</span>
+    <span class="p">{</span>
+        <span class="n">CarMake</span><span class="p">.</span><span class="n">Chevrolet</span>   <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">ChevroletService</span><span class="p">(),</span>
+        <span class="n">CarMake</span><span class="p">.</span><span class="n">Ford</span>        <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">FordService</span><span class="p">(),</span>
+        <span class="n">CarMake</span><span class="p">.</span><span class="n">Dodge</span>       <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">DodgeService</span><span class="p">(),</span>
+        <span class="n">CarMake</span><span class="p">.</span><span class="n">Tesla</span>       <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">TeslaService</span><span class="p">(),</span>
+        <span class="n">_</span>                   <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">"Invalid value for CarMake"</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="k">nameof</span><span class="p">(</span><span class="n">make</span><span class="p">))</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This new expression has a few syntax improvements, such as:</p>
+
+<ol>
+  <li>The variable comes BEFORE the <code class="language-plaintext highlighter-rouge">switch</code> keyword.  This is a sure sign you’re looking at an expression, instead of the statement.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">case</code> and <code class="language-plaintext highlighter-rouge">:</code> are gone, in favor of <code class="language-plaintext highlighter-rouge">=&gt;</code>, which is more intuitive.</li>
+  <li>The discard variable, <code class="language-plaintext highlighter-rouge">_</code>, replaces the <code class="language-plaintext highlighter-rouge">default</code> case we’re used to seeing.</li>
+  <li>Finally, the bodies are expressions themselves, instead of statements.</li>
+</ol>
+
+<p>Let me know what you think about this new (and improved!) way of writing switch <del>stateme</del>…expressions in the comments!</p>
+
+<hr />
+
+<blockquote>
+  <p>This post, “C# 8.0 - Switch Expressions”, first appeared at <a href="https://www.codingwithcalvin.net/c-8-switch-expressions">https://www.codingwithcalvin.net/c-8-switch-expressions</a></p>
+</blockquote>
+
+	</div>
+
+</article>
+
+
+	<div class="share">
+	<div class="addthis_inline_share_toolbox"></div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a4c04d0ba6c1136"></script>
+</div>
+
+
+
+<div id="page-navigation"> 
+        <div class="previous"> 
+         
+        </div>
+
+        <div class="next"> 
+         
+               <a href="/clean-coding-in-c-part-i/" title="next Post: 
+Clean Coding in C# - Part I">Clean Coding in C# - Part I &raquo; </a> 
+         
+        </div>
+</div> 
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2020 - Akhilesh Pratap Blog content licensed under the Creative Commons <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>
+  | Unless otherwise stated or granted, code samples licensed under the <a href="http://sm.mit-license.org/">MIT license</a>.
+  | Site design based on the <a href="https://github.com/shashankmehta/greyshade">Greyshade theme</a> under the <a href="https://sm.mit-license.org/">MIT license</a>
+</p>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'akpratap';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://localhost:4000/c-8-switch-expressions/';
+        var disqus_url = 'http://localhost:4000/c-8-switch-expressions/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+    
+      var embedScript = document.createElement('script');
+      embedScript.type = 'text/javascript';
+      embedScript.async = true;
+      embedScript.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(embedScript);
+    
+      var countScript = document.createElement('script');
+      countScript.type = 'text/javascript';
+      countScript.async = true;
+      countScript.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(countScript);
+    }());
+</script>
+
+
+</footer>
+		</div>
+	</div>
+</body>
+</html>
