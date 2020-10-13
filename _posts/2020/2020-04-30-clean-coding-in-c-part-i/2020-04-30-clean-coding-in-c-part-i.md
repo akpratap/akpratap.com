@@ -33,8 +33,3 @@ if(isAdmin || userHasPermission){
 You can see we've introduced a couple of variables with very explicit names that we've swapped into the `if` statement.  Now when you scan that code and come across that `if` statement, you don't have to read into the logic to understand the condition that needs met.  If you *do care* about what those two things are, then you can easily scan up to the variable declarations and "dig in" a little more.
 
 Happy clean coding, dear reader!
-
----
-
->This post, "Clean Coding in C# - Part I", first appeared on [https://www.codingwithcalvin.net/clean-coding-in-c-part-i](https://www.codingwithcalvin.net/clean-coding-in-c-part-i)
-
