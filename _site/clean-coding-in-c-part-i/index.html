@@ -42,7 +42,7 @@
 
 	
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Clean Coding in C# - Part I" />
+		<meta property="og:title" content="Clean Coding in C#" />
   	
 
   	
@@ -54,7 +54,7 @@
 	
 
 	
-		<meta property="og:description" content="The first post in a new series about what I consider to be 'clean code' (using C#, of course). In this one, let's take a look at conditionals (if/else statements)" />
+		<meta property="og:description" content="Conditionals (if/else statements)" />
 	
 
 	
@@ -71,7 +71,7 @@
 	
 
 	
-		<title>Clean Coding in C# - Part I - Akhilesh Pratap</title>
+		<title>Clean Coding in C# - Akhilesh Pratap</title>
 	
 </head>
 
@@ -88,7 +88,7 @@
 <hgroup>
   <h1><a href="/">Akhilesh Pratap</a></h1>
   
-    <h2>My Digital Mind</h2>
+    <h2>My learnings</h2>
   
 </hgroup>
 <nav id="main-nav"><ul class="main-navigation">
@@ -114,16 +114,16 @@
 	</div>
 </nav>
 
-<a href="https://akpratap.com">
+<!-- <a href="https://akpratap.com">
   <img src="/images/social/MVP_Logo_Preferred_Cyan300_RGB_300ppi.png" width="72px" style="padding-top: 36px;" />
-</a>
+</a> -->
 </header>				
 			</div>
 		</div>
 		<div class="mid-col">
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">Clean Coding in C# - Part I</h1>
+	<h1 class="title" itemprop="name">Clean Coding in C#</h1>
 	<div class="meta">
   <span class="date-large">
 
@@ -160,39 +160,7 @@
 
 		
 
-		<p>One thing I’ve learned over the years is that being clever with your code is a waste of time and energy.  The simpler, the better.  Part of being “simpler”, to me, falls into the paradigm of “clean code”.  But - what does “clean code” actually mean?  In this post, we’ll look at what I consider to be a “clean(er)” conditional statement that reduces cognitive complexity/overhead.</p>
-
-<p>For example, consider a “simple” authorization check (contrived, of course):</p>
-
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="n">_authorizationService</span><span class="p">.</span><span class="nf">HasClaim</span><span class="p">(</span><span class="n">Claims</span><span class="p">.</span><span class="n">Admin</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">_authorizationService</span><span class="p">.</span><span class="nf">HasClaim</span><span class="p">(</span><span class="n">Claims</span><span class="p">.</span><span class="n">User</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">_authorizationService</span><span class="p">.</span><span class="nf">HasClaim</span><span class="p">(</span><span class="n">Claims</span><span class="p">.</span><span class="n">ModifyTimesheet</span><span class="p">))){</span>
-    <span class="c1">// do something</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>That <code class="language-plaintext highlighter-rouge">if</code> statement is getting kinda hairy, huh?  Take into consideration new folks joining your team trying to make heads or tails of that, too.</p>
-
-<p>Yes, within a few seconds we gleam that if your an Admin or a User that also has the ModifyTimesheet permission, you should be allowed to <code class="language-plaintext highlighter-rouge">//do something</code>, but what if we just gave those “things” actual names?</p>
-
-<p>Consider this refactor:</p>
-
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">isAdmin</span> <span class="p">=</span> <span class="n">_authorizationService</span><span class="p">.</span><span class="nf">HasClaim</span><span class="p">(</span><span class="n">Claims</span><span class="p">.</span><span class="n">Admin</span><span class="p">);</span>
-<span class="kt">bool</span> <span class="n">userHasPermission</span> <span class="p">=</span> <span class="n">_authorizationService</span><span class="p">.</span><span class="nf">HasClaim</span><span class="p">(</span><span class="n">Claims</span><span class="p">.</span><span class="n">User</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">_authorizationService</span><span class="p">.</span><span class="nf">HasClaim</span><span class="p">(</span><span class="n">Claims</span><span class="p">.</span><span class="n">ModifyTimesheet</span><span class="p">);</span>
-
-<span class="k">if</span><span class="p">(</span><span class="n">isAdmin</span> <span class="p">||</span> <span class="n">userHasPermission</span><span class="p">){</span>
-    <span class="c1">// do something</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>You can see we’ve introduced a couple of variables with very explicit names that we’ve swapped into the <code class="language-plaintext highlighter-rouge">if</code> statement.  Now when you scan that code and come across that <code class="language-plaintext highlighter-rouge">if</code> statement, you don’t have to read into the logic to understand the condition that needs met.  If you <em>do care</em> about what those two things are, then you can easily scan up to the variable declarations and “dig in” a little more.</p>
-
-<p>Happy clean coding, dear reader!</p>
-
-<hr />
-
-<blockquote>
-  <p>This post, “Clean Coding in C# - Part I”, first appeared on <a href="https://www.codingwithcalvin.net/clean-coding-in-c-part-i">https://www.codingwithcalvin.net/clean-coding-in-c-part-i</a></p>
-</blockquote>
-
+		
 
 	</div>
 

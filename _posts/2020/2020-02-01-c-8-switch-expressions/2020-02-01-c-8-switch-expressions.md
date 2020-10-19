@@ -6,60 +6,70 @@ description: "Switch 'expressions' are a more concise version of a switch 'state
 
 In C# 8.0, a new form of "switch" was introduced.  While similar, you'll find that this new "switch expression" is more concise than it's "switch statement" counterpart as it does not require all the various keywords (`case`, `break`, `default`, etc.).
 
-Take this, albeit a contrived, example, starting with this enum of car makes in our pretend application:
+For example, consider the following enum that lists the colors of the rainbow:
 
 ```csharp
-public enum CarMake
+public enum Rainbow
 {
-    Chevrolet,
-    Ford,
-    Dodge,
-    Tesla
+    Red,
+    Orange,
+    Yellow,
+    Green,
+    Blue,
+    Indigo,
+    Violet
 }
 ```
 
-With that enum, we can create a specific "car manufacturing service".  Before C# 8.0, that would have looked something like this:
+And if you want to convert a Rainbow value to its RGB values, this is how you would a "switch expression":
 
 ```csharp
-public ICarService CarMakeFactory(CarMake make)
-{
-    switch (make)
+public static RGBColor FromRainbow(Rainbow colorBand) =>
+    colorBand switch
     {
-        case CarMake.Chevrolet:
-            return new ChevroletService();
-        case CarMake.Ford:
-            return new FordService();
-        case CarMake.Dodge:
-            return new DodgeService();
-        case CarMake.Tesla:
-            return new TeslaService();
+        Rainbow.Red    => new RGBColor(0xFF, 0x00, 0x00),
+        Rainbow.Orange => new RGBColor(0xFF, 0x7F, 0x00),
+        Rainbow.Yellow => new RGBColor(0xFF, 0xFF, 0x00),
+        Rainbow.Green  => new RGBColor(0x00, 0xFF, 0x00),
+        Rainbow.Blue   => new RGBColor(0x00, 0x00, 0xFF),
+        Rainbow.Indigo => new RGBColor(0x4B, 0x00, 0x82),
+        Rainbow.Violet => new RGBColor(0x94, 0x00, 0xD3),
+        _              => throw new ArgumentException(message: "invalid enum value", paramName: nameof(colorBand)),
+    };
+```
+
+Contrast that with the equivalent code using the classic "switch statement":
+
+```csharp
+public static RGBColor FromRainbowClassic(Rainbow colorBand)
+{
+    switch (colorBand)
+    {
+        case Rainbow.Red:
+            return new RGBColor(0xFF, 0x00, 0x00);
+        case Rainbow.Orange:
+            return new RGBColor(0xFF, 0x7F, 0x00);
+        case Rainbow.Yellow:
+            return new RGBColor(0xFF, 0xFF, 0x00);
+        case Rainbow.Green:
+            return new RGBColor(0x00, 0xFF, 0x00);
+        case Rainbow.Blue:
+            return new RGBColor(0x00, 0x00, 0xFF);
+        case Rainbow.Indigo:
+            return new RGBColor(0x4B, 0x00, 0x82);
+        case Rainbow.Violet:
+            return new RGBColor(0x94, 0x00, 0xD3);
         default:
-            throw new ArgumentException(message: "Invalid value for CarMake", paramName: nameof(make));    
-    }
-}
-```
-
-In C# 8.0, we can make this a little more concise, and, in my opinion, easier to read:
-
-```csharp
-public ICarService CarMakeFactory(CarMake make)
-{
-    return make switch
-    {
-        CarMake.Chevrolet   => new ChevroletService(),
-        CarMake.Ford        => new FordService(),
-        CarMake.Dodge       => new DodgeService(),
-        CarMake.Tesla       => new TeslaService(),
-        _                   => throw new ArgumentException(message: "Invalid value for CarMake", paramName: nameof(make))
+            throw new ArgumentException(message: "invalid enum value", paramName: nameof(colorBand));
     };
 }
 ```
 
-This new expression has a few syntax improvements, such as:
+New switch expression has several syntax improvements:
 
 1. The variable comes BEFORE the `switch` keyword.  This is a sure sign you're looking at an expression, instead of the statement.
 2. The `case` and `:` are gone, in favor of `=>`, which is more intuitive.
 3. The discard variable, `_`, replaces the `default` case we're used to seeing.
 4. Finally, the bodies are expressions themselves, instead of statements.
 
-Let me know what you think about this new (and improved!) way of writing switch ~~stateme~~...expressions in the comments!
+Let me know what you think about this new way of writing switch ~~stateme~~...expressions in the comments!

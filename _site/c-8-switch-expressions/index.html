@@ -88,7 +88,7 @@
 <hgroup>
   <h1><a href="/">Akhilesh Pratap</a></h1>
   
-    <h2>My Digital Mind</h2>
+    <h2>My learnings</h2>
   
 </hgroup>
 <nav id="main-nav"><ul class="main-navigation">
@@ -114,9 +114,9 @@
 	</div>
 </nav>
 
-<a href="https://akpratap.com">
+<!-- <a href="https://akpratap.com">
   <img src="/images/social/MVP_Logo_Preferred_Cyan300_RGB_300ppi.png" width="72px" style="padding-top: 36px;" />
-</a>
+</a> -->
 </header>				
 			</div>
 		</div>
@@ -159,65 +159,66 @@
 	<div class="entry-content" itemprop="articleBody">
 
 		
-		<iframe
-			width="710"
-			height="399"
-			src="https://www.youtube.com/embed/yLJl4bJtoMQ"
-			frameborder="0"
-			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen 
-			loading="lazy"></iframe>
-		
 
 		<p>In C# 8.0, a new form of “switch” was introduced.  While similar, you’ll find that this new “switch expression” is more concise than it’s “switch statement” counterpart as it does not require all the various keywords (<code class="language-plaintext highlighter-rouge">case</code>, <code class="language-plaintext highlighter-rouge">break</code>, <code class="language-plaintext highlighter-rouge">default</code>, etc.).</p>
 
-<p>Take this, albeit a contrived, example, starting with this enum of car makes in our pretend application:</p>
+<p>For example, consider the following enum that lists the colors of the rainbow:</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">enum</span> <span class="n">CarMake</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">enum</span> <span class="n">Rainbow</span>
 <span class="p">{</span>
-    <span class="n">Chevrolet</span><span class="p">,</span>
-    <span class="n">Ford</span><span class="p">,</span>
-    <span class="n">Dodge</span><span class="p">,</span>
-    <span class="n">Tesla</span>
+    <span class="n">Red</span><span class="p">,</span>
+    <span class="n">Orange</span><span class="p">,</span>
+    <span class="n">Yellow</span><span class="p">,</span>
+    <span class="n">Green</span><span class="p">,</span>
+    <span class="n">Blue</span><span class="p">,</span>
+    <span class="n">Indigo</span><span class="p">,</span>
+    <span class="n">Violet</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>With that enum, we can create a specific “car manufacturing service”.  Before C# 8.0, that would have looked something like this:</p>
+<p>And if you want to convert a Rainbow value to its RGB values, this is how you would a “switch expression”:</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="n">ICarService</span> <span class="nf">CarMakeFactory</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">make</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">switch</span> <span class="p">(</span><span class="n">make</span><span class="p">)</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">static</span> <span class="n">RGBColor</span> <span class="nf">FromRainbow</span><span class="p">(</span><span class="n">Rainbow</span> <span class="n">colorBand</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="n">colorBand</span> <span class="k">switch</span>
     <span class="p">{</span>
-        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Chevrolet</span><span class="p">:</span>
-            <span class="k">return</span> <span class="k">new</span> <span class="nf">ChevroletService</span><span class="p">();</span>
-        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Ford</span><span class="p">:</span>
-            <span class="k">return</span> <span class="k">new</span> <span class="nf">FordService</span><span class="p">();</span>
-        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Dodge</span><span class="p">:</span>
-            <span class="k">return</span> <span class="k">new</span> <span class="nf">DodgeService</span><span class="p">();</span>
-        <span class="k">case</span> <span class="n">CarMake</span><span class="p">.</span><span class="n">Tesla</span><span class="p">:</span>
-            <span class="k">return</span> <span class="k">new</span> <span class="nf">TeslaService</span><span class="p">();</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Red</span>    <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0xFF</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Orange</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0xFF</span><span class="p">,</span> <span class="m">0x7F</span><span class="p">,</span> <span class="m">0x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Yellow</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0xFF</span><span class="p">,</span> <span class="m">0xFF</span><span class="p">,</span> <span class="m">0x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Green</span>  <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x00</span><span class="p">,</span> <span class="m">0xFF</span><span class="p">,</span> <span class="m">0x00</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Blue</span>   <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0xFF</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Indigo</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x4B</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x82</span><span class="p">),</span>
+        <span class="n">Rainbow</span><span class="p">.</span><span class="n">Violet</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x94</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0xD3</span><span class="p">),</span>
+        <span class="n">_</span>              <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">"invalid enum value"</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="k">nameof</span><span class="p">(</span><span class="n">colorBand</span><span class="p">)),</span>
+    <span class="p">};</span>
+</code></pre></div></div>
+
+<p>Contrast that with the equivalent code using the classic “switch statement”:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">static</span> <span class="n">RGBColor</span> <span class="nf">FromRainbowClassic</span><span class="p">(</span><span class="n">Rainbow</span> <span class="n">colorBand</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">colorBand</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Red</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0xFF</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">);</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Orange</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0xFF</span><span class="p">,</span> <span class="m">0x7F</span><span class="p">,</span> <span class="m">0x00</span><span class="p">);</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Yellow</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0xFF</span><span class="p">,</span> <span class="m">0xFF</span><span class="p">,</span> <span class="m">0x00</span><span class="p">);</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Green</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x00</span><span class="p">,</span> <span class="m">0xFF</span><span class="p">,</span> <span class="m">0x00</span><span class="p">);</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Blue</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0xFF</span><span class="p">);</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Indigo</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x4B</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x82</span><span class="p">);</span>
+        <span class="k">case</span> <span class="n">Rainbow</span><span class="p">.</span><span class="n">Violet</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="p">(</span><span class="m">0x94</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0xD3</span><span class="p">);</span>
         <span class="k">default</span><span class="p">:</span>
-            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">"Invalid value for CarMake"</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="k">nameof</span><span class="p">(</span><span class="n">make</span><span class="p">));</span>    
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>In C# 8.0, we can make this a little more concise, and, in my opinion, easier to read:</p>
-
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="n">ICarService</span> <span class="nf">CarMakeFactory</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">make</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">make</span> <span class="k">switch</span>
-    <span class="p">{</span>
-        <span class="n">CarMake</span><span class="p">.</span><span class="n">Chevrolet</span>   <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">ChevroletService</span><span class="p">(),</span>
-        <span class="n">CarMake</span><span class="p">.</span><span class="n">Ford</span>        <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">FordService</span><span class="p">(),</span>
-        <span class="n">CarMake</span><span class="p">.</span><span class="n">Dodge</span>       <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">DodgeService</span><span class="p">(),</span>
-        <span class="n">CarMake</span><span class="p">.</span><span class="n">Tesla</span>       <span class="p">=&gt;</span> <span class="k">new</span> <span class="nf">TeslaService</span><span class="p">(),</span>
-        <span class="n">_</span>                   <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">"Invalid value for CarMake"</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="k">nameof</span><span class="p">(</span><span class="n">make</span><span class="p">))</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="s">"invalid enum value"</span><span class="p">,</span> <span class="n">paramName</span><span class="p">:</span> <span class="k">nameof</span><span class="p">(</span><span class="n">colorBand</span><span class="p">));</span>
     <span class="p">};</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>This new expression has a few syntax improvements, such as:</p>
+<p>New switch expression has several syntax improvements:</p>
 
 <ol>
   <li>The variable comes BEFORE the <code class="language-plaintext highlighter-rouge">switch</code> keyword.  This is a sure sign you’re looking at an expression, instead of the statement.</li>
@@ -226,13 +227,7 @@
   <li>Finally, the bodies are expressions themselves, instead of statements.</li>
 </ol>
 
-<p>Let me know what you think about this new (and improved!) way of writing switch <del>stateme</del>…expressions in the comments!</p>
-
-<hr />
-
-<blockquote>
-  <p>This post, “C# 8.0 - Switch Expressions”, first appeared at <a href="https://www.codingwithcalvin.net/c-8-switch-expressions">https://www.codingwithcalvin.net/c-8-switch-expressions</a></p>
-</blockquote>
+<p>Let me know what you think about this new way of writing switch <del>stateme</del>…expressions in the comments!</p>
 
 	</div>
 
@@ -254,7 +249,7 @@
         <div class="next"> 
          
                <a href="/clean-coding-in-c-part-i/" title="next Post: 
-Clean Coding in C# - Part I">Clean Coding in C# - Part I &raquo; </a> 
+Clean Coding in C#">Clean Coding in C# &raquo; </a> 
          
         </div>
 </div> 
