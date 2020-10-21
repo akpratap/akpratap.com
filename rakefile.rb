@@ -66,7 +66,7 @@ description: "#{postDescriptionInput}"
 
 ---
 
->This post, "#{postTitleInput}", first appeared on [https://www.codingwithcalvin.net/#{postTitleClean}](https://www.codingwithcalvin.net/#{postTitleClean})
+>This post, "#{postTitleInput}", first appeared on [https://www.akpratap.com/#{postTitleClean}](https://www.akpratap.com/#{postTitleClean})
 
 EOF
 

@@ -27,10 +27,10 @@
 	<meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=WGL8Y3xokm">
 	<meta name="theme-color" content="#ffffff">
 
-	<link rel="canonical" href="http://localhost:4000/clean-coding-in-c-part-i/">
+	<link rel="canonical" href="http://localhost:4000/serve-remote-files-in-aspnet-core/">
 	
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:url" content="http://localhost:4000/clean-coding-in-c-part-i/" />
+	<meta property="og:url" content="http://localhost:4000/serve-remote-files-in-aspnet-core/" />
 	<meta property="og:site_name" content="Calvin A. Allen" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@_CalvinAllen" />
@@ -42,7 +42,7 @@
 
 	
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Clean Coding in C#" />
+		<meta property="og:title" content="Serve remote files in ASP.NET Core" />
   	
 
   	
@@ -54,24 +54,24 @@
 	
 
 	
-		<meta property="og:description" content="Conditionals (if/else statements)" />
+		<meta property="og:description" content="Serve remote files in ASP.NET Core" />
 	
 
 	
-		<meta property="article:published_time" content="2020-05-01T01:13:31+12:00" />
+		<meta property="article:published_time" content="2020-10-21T21:58:52+13:00" />
 		<meta property="article:author" content="http://localhost:4000/about/" />
 	
 
 	
   		
-  			<meta content="csharp" property="article:tag">
-  		
   			<meta content="dotnet" property="article:tag">
+  		
+  			<meta content="csharp" property="article:tag">
   		
 	
 
 	
-		<title>Clean Coding in C# - Akhilesh Pratap</title>
+		<title>Serve remote files in ASP.NET Core - Akhilesh Pratap</title>
 	
 </head>
 
@@ -123,14 +123,14 @@
 		<div class="mid-col">
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">Clean Coding in C#</h1>
+	<h1 class="title" itemprop="name">Serve remote files in ASP.NET Core</h1>
 	<div class="meta">
   <span class="date-large">
 
 
 
 
-<time datetime="2020-05-01T01:13:31+12:00"  itemprop="datePublished">May  1, 2020</time></span>
+<time datetime="2020-10-21T21:58:52+13:00"  itemprop="datePublished">October 21, 2020</time></span>
   <br />
 	
 		
@@ -138,11 +138,11 @@
 <span class="comments"><a href="#disqus_thread">comments</a></span>
   
 	<span class="tags">
-		csharp, dotnet
+		dotnet, csharp
   </span>
   <span class="edit">
 
-<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-04-30-clean-coding-in-c-part-i/2020-04-30-clean-coding-in-c-part-i.md">edit</a>
+<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-10-21-serve-remote-files-in-aspnet-core/2020-10-21-serve-remote-files-in-aspnet-core.md">edit</a>
 </span>
 </div>
 
@@ -160,7 +160,36 @@
 
 		
 
-		
+		<h2 id="problem">Problem</h2>
+
+<p>We wanted to build a feature in an ASP.Net Core application using which we could serve remote files (stored in database/blob storage) to clients via simple URLs.</p>
+
+<p><em>Example.</em></p>
+
+<blockquote>
+  <p>https://your-application.com/library/folder</p>
+</blockquote>
+
+<blockquote>
+  <p>https://your-application.com/library/folder/file-name.pdf</p>
+</blockquote>
+
+<p>ASP.NET Core abstracts file system access through the use of File Providers, and it uses Static File Middleware to locate static files. Static files, such as HTML, CSS, images, and JavaScript, are assets in an ASP.NET Core app and can be served directly to clients.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>Build a custom IFileProvider for ASP.NET Core which can allow remotely located files (database/Azure Blob/AWS S3) to be treated as if they were an integral part of the application, and allow them to be part of the static file functionality.</p>
+
+<p>References:
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers
+ 
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1</p>
+
+<hr />
+
+<blockquote>
+  <p>This post, “Serve remote files in ASP.NET Core”, first appeared on <a href="https://www.akpratap.com/serve-remote-files-in-aspnet-core">https://www.akpratap.com/serve-remote-files-in-aspnet-core</a></p>
+</blockquote>
 
 	</div>
 
@@ -177,15 +206,12 @@
 <div id="page-navigation"> 
         <div class="previous"> 
          
-                <a href="/c-8-switch-expressions/" title="Previous Post: 
-C# 8.0 - Switch Expressions">&laquo; C# 8.0 - Switch Expressions</a>
+                <a href="/clean-coding-in-c-part-i/" title="Previous Post: 
+Clean Coding in C#">&laquo; Clean Coding in C#</a>
          
         </div>
 
         <div class="next"> 
-         
-               <a href="/serve-remote-files-in-aspnet-core/" title="next Post: 
-Serve remote files in ASP.NET Core">Serve remote files in ASP.NET Core &raquo; </a> 
          
         </div>
 </div> 
@@ -212,8 +238,8 @@ Serve remote files in ASP.NET Core">Serve remote files in ASP.NET Core &raquo; <
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://localhost:4000/clean-coding-in-c-part-i/';
-        var disqus_url = 'http://localhost:4000/clean-coding-in-c-part-i/';
+        var disqus_identifier = 'http://localhost:4000/serve-remote-files-in-aspnet-core/';
+        var disqus_url = 'http://localhost:4000/serve-remote-files-in-aspnet-core/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -3,7 +3,7 @@
   <generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator>
   <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" />
-  <updated>2020-10-20T10:58:50+13:00</updated>
+  <updated>2020-10-21T22:56:42+13:00</updated>
   <id>http://localhost:4000/</id>
 
   
@@ -23,6 +23,78 @@
   
 
   
+  
+
+      
+      
+      
+      
+      
+
+    <entry>
+      <title type="html">Serve remote files in ASP.NET Core</title>
+      <link href="http://localhost:4000/serve-remote-files-in-aspnet-core/" rel="alternate" type="text/html" title="Serve remote files in ASP.NET Core" />
+      <published>2020-10-21T21:58:52+13:00</published>
+      <updated>2020-10-21T21:58:52+13:00</updated>
+      <id>http://localhost:4000/serve-remote-files-in-aspnet-core</id>
+      <content type="html" xml:base="http://localhost:4000/serve-remote-files-in-aspnet-core/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;We wanted to build a feature in an ASP.Net Core application using which we could serve remote files (stored in database/blob storage) to clients via simple URLs.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example.&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://your-application.com/library/folder&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://your-application.com/library/folder/file-name.pdf&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ASP.NET Core abstracts file system access through the use of File Providers, and it uses Static File Middleware to locate static files. Static files, such as HTML, CSS, images, and JavaScript, are assets in an ASP.NET Core app and can be served directly to clients.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Build a custom IFileProvider for ASP.NET Core which can allow remotely located files (database/Azure Blob/AWS S3) to be treated as if they were an integral part of the application, and allow them to be part of the static file functionality.&lt;/p&gt;
+
+&lt;p&gt;References:
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers
+ 
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This post, “Serve remote files in ASP.NET Core”, first appeared on &lt;a href=&quot;https://www.akpratap.com/serve-remote-files-in-aspnet-core&quot;&gt;https://www.akpratap.com/serve-remote-files-in-aspnet-core&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      <author>
+          <name>Akhilesh Pratap</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="dotnet" />
+      
+        <category term="csharp" />
+      
+
+
+      
+        <summary type="html">Serve remote files in ASP.NET Core</summary>
+	    
+
+      
+      
+      
+
+      
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/social/headshot-cover.png" />
+      
+    </entry>
   
 
       
@@ -108,7 +180,7 @@
         &lt;span class=&quot;n&quot;&gt;Rainbow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Blue&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RGBColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;Rainbow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Indigo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RGBColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0x4B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0x82&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;Rainbow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Violet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RGBColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0x94&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0xD3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;              &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;invalid enum value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paramName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nameof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colorBand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;              &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...),&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -133,7 +205,7 @@
         &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rainbow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Violet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RGBColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0x94&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0xD3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;invalid enum value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paramName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nameof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colorBand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
