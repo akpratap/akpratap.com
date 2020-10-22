@@ -1,0 +1,127 @@
+I"»
+<div class="archives" itemscope="" itemtype="http://schema.org/Blog">
+
+
+	
+
+
+	
+	
+	<h2 class="year">2020</h2>
+	<ul>
+
+	<li>
+		<h3 class="title"><a href="/serve-remote-files-in-aspnet-core/">Serve remote files in ASP.NET Core</a></h3>
+		<br />
+		<div class="meta">
+			<span class="date"><time datetime="2020-10-21T21:58:52+13:00" itemprop="datePublished">Oct 21</time></span>
+			
+			<span class="tags">
+				dotnet, csharp
+			</span>
+			
+			
+			
+		    
+
+<span class="comments"><a href="/serve-remote-files-in-aspnet-core/#disqus_thread">comments</a></span>
+		    
+		    <span class="edit">
+
+<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-10-21-serve-remote-files-in-aspnet-core/2020-10-21-serve-remote-files-in-aspnet-core.md">edit</a>
+</span>
+		</div>
+	</li>
+
+
+
+
+	
+
+
+	<li>
+		<h3 class="title"><a href="/run-redis-under-docker-on-windows-10/">Run Redis under docker on Windows 10</a></h3>
+		<br />
+		<div class="meta">
+			<span class="date"><time datetime="2020-09-23T08:32:06+12:00" itemprop="datePublished">Sep 23</time></span>
+			
+			<span class="tags">
+				docker, redis
+			</span>
+			
+			
+			
+		    
+
+<span class="comments"><a href="/run-redis-under-docker-on-windows-10/#disqus_thread">comments</a></span>
+		    
+		    <span class="edit">
+
+<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-09-23-run-redis-under-docker-on-windows-10/2020-09-23-run-redis-under-docker-on-windows-10.md">edit</a>
+</span>
+		</div>
+	</li>
+
+
+
+
+	
+
+
+	<li>
+		<h3 class="title"><a href="/clean-coding-in-csharp/">Clean Coding in C#</a></h3>
+		<br />
+		<div class="meta">
+			<span class="date"><time datetime="2020-05-01T01:13:31+12:00" itemprop="datePublished">May  1</time></span>
+			
+			<span class="tags">
+				csharp, dotnet
+			</span>
+			
+			
+			
+		    
+
+<span class="comments"><a href="/clean-coding-in-csharp/#disqus_thread">comments</a></span>
+		    
+		    <span class="edit">
+
+<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-04-30-clean-coding-in-csharp/2020-04-30-clean-coding-in-csharp.md">edit</a>
+</span>
+		</div>
+	</li>
+
+
+
+
+	
+
+
+	<li>
+		<h3 class="title"><a href="/c-8-switch-expressions/">C# 8.0 - Switch Expressions</a></h3>
+		<br />
+		<div class="meta">
+			<span class="date"><time datetime="2020-02-01T00:00:00+13:00" itemprop="datePublished">Feb  1</time></span>
+			
+			<span class="tags">
+				csharp, dotnet
+			</span>
+			
+			
+			
+		    
+
+<span class="comments"><a href="/c-8-switch-expressions/#disqus_thread">comments</a></span>
+		    
+		    <span class="edit">
+
+<a href="https://github.com/akpratap/akpratap.com/edit/master/_posts/2020/2020-02-01-c-8-switch-expressions/2020-02-01-c-8-switch-expressions.md">edit</a>
+</span>
+		</div>
+	</li>
+
+
+
+  </ul>
+</div>
+:ET

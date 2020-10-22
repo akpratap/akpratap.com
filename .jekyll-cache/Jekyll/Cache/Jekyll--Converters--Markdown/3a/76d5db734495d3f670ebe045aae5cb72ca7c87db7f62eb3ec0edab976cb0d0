@@ -1,0 +1,36 @@
+I"�<ol>
+  <li>Install Docker for Desktop <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">https://hub.docker.com/editions/community/docker-ce-desktop-windows</a></li>
+  <li>Run docker command to download redis and run a container</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --name redis -d redis -p 6379:6379
+</code></pre></div></div>
+<ol>
+  <li>Verify that redis container is working. Start an interactive session with above running redis container</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it redis sh
+</code></pre></div></div>
+<p>you get the # prompt and now run redis-cli at the prompt as below</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redis-cli
+</code></pre></div></div>
+
+<p>This hooks you to the default redis port 6379 on your localhost as below</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1:6379&gt;
+</code></pre></div></div>
+
+<p>Now you’re ready to run the redis commands on redis-cli. Type ‘ping’ to test</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping
+</code></pre></div></div>
+<hr />
+
+<p>Complete redis-cli command reference is available at https://redis.io/commands</p>
+
+<blockquote>
+  <p>This post, “Run Redis under docker on Windows 10”, first appeared on <a href="https://www.akpratap.com/run-redis-under-docker-on-windows-10">https://www.akpratap.com/run-redis-under-docker-on-windows-10</a></p>
+</blockquote>
+
+:ET
