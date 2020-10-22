@@ -3,7 +3,7 @@
   <generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator>
   <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" />
-  <updated>2020-10-21T22:56:42+13:00</updated>
+  <updated>2020-10-23T10:17:17+13:00</updated>
   <id>http://localhost:4000/</id>
 
   
@@ -57,10 +57,11 @@
 
 &lt;p&gt;Build a custom IFileProvider for ASP.NET Core which can allow remotely located files (database/Azure Blob/AWS S3) to be treated as if they were an integral part of the application, and allow them to be part of the static file functionality.&lt;/p&gt;
 
-&lt;p&gt;References:
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers&quot;&gt;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers&lt;/a&gt;
  
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1&lt;/p&gt;
+&lt;a href=&quot;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1&quot;&gt;https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -104,12 +105,96 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspn
       
 
     <entry>
+      <title type="html">Run Redis under docker on Windows 10</title>
+      <link href="http://localhost:4000/run-redis-under-docker-on-windows-10/" rel="alternate" type="text/html" title="Run Redis under docker on Windows 10" />
+      <published>2020-09-23T08:32:06+12:00</published>
+      <updated>2020-09-23T08:32:06+12:00</updated>
+      <id>http://localhost:4000/run-redis-under-docker-on-windows-10</id>
+      <content type="html" xml:base="http://localhost:4000/run-redis-under-docker-on-windows-10/">&lt;ol&gt;
+  &lt;li&gt;Install Docker for Desktop &lt;a href=&quot;https://hub.docker.com/editions/community/docker-ce-desktop-windows&quot;&gt;https://hub.docker.com/editions/community/docker-ce-desktop-windows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Run docker command to download redis and run a container&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run --name redis -d redis -p 6379:6379
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;Verify that redis container is working. Start an interactive session with above running redis container&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker exec -it redis sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;you get the # prompt and now run redis-cli at the prompt as below&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redis-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This hooks you to the default redis port 6379 on your localhost as below&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:6379&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you’re ready to run the redis commands on redis-cli. Type ‘ping’ to test&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ping
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Complete redis-cli command reference is available at https://redis.io/commands&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This post, “Run Redis under docker on Windows 10”, first appeared on &lt;a href=&quot;https://www.akpratap.com/run-redis-under-docker-on-windows-10&quot;&gt;https://www.akpratap.com/run-redis-under-docker-on-windows-10&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      <author>
+          <name>Akhilesh Pratap</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="docker" />
+      
+        <category term="redis" />
+      
+
+
+      
+        <summary type="html">Install, Run and Interact with Redis under docker on Windows 10</summary>
+	    
+
+      
+      
+      
+
+      
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/social/headshot-cover.png" />
+      
+    </entry>
+  
+
+      
+      
+      
+      
+      
+
+    <entry>
       <title type="html">Clean Coding in C#</title>
-      <link href="http://localhost:4000/clean-coding-in-c-part-i/" rel="alternate" type="text/html" title="Clean Coding in C#" />
+      <link href="http://localhost:4000/clean-coding-in-csharp/" rel="alternate" type="text/html" title="Clean Coding in C#" />
       <published>2020-05-01T01:13:31+12:00</published>
       <updated>2020-05-01T01:13:31+12:00</updated>
-      <id>http://localhost:4000/clean-coding-in-c-part-i</id>
-      <content type="html" xml:base="http://localhost:4000/clean-coding-in-c-part-i/"></content>
+      <id>http://localhost:4000/clean-coding-in-csharp</id>
+      <content type="html" xml:base="http://localhost:4000/clean-coding-in-csharp/">&lt;blockquote&gt;
+  &lt;p&gt;Writing code that computers can understand is easy, but writing code that humans can understand is hard, and we should strive for it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This post, “Serve remote files in ASP.NET Core”, first appeared on &lt;a href=&quot;https://www.akpratap.com/clean-coding-in-csharp/&quot;&gt;https://www.akpratap.com/clean-coding-in-csharp&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
 
       <author>
           <name>Akhilesh Pratap</name>
@@ -127,7 +212,7 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspn
 
 
       
-        <summary type="html">Conditionals (if/else statements)</summary>
+        <summary type="html">Write code that humans can understand</summary>
 	    
 
       

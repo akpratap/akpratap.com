@@ -8,7 +8,12 @@
 </url>
 
 <url>
-<loc>http://localhost:4000/clean-coding-in-c-part-i/</loc>
+<loc>http://localhost:4000/run-redis-under-docker-on-windows-10/</loc>
+<lastmod>2020-09-23T08:32:06+12:00</lastmod>
+</url>
+
+<url>
+<loc>http://localhost:4000/clean-coding-in-csharp/</loc>
 <lastmod>2020-05-01T01:13:31+12:00</lastmod>
 </url>
 
@@ -46,6 +51,14 @@
 
 <url>
 <loc>http://localhost:4000/tags/dotnet/</loc>
+</url>
+
+<url>
+<loc>http://localhost:4000/tags/docker/</loc>
+</url>
+
+<url>
+<loc>http://localhost:4000/tags/redis/</loc>
 </url>
 
 

@@ -22,9 +22,10 @@ ASP.NET Core abstracts file system access through the use of File Providers, and
 Build a custom IFileProvider for ASP.NET Core which can allow remotely located files (database/Azure Blob/AWS S3) to be treated as if they were an integral part of the application, and allow them to be part of the static file functionality.
 
 References:
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers
+
+[https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers)
  
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1
+[https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1)
 
 ---
 
